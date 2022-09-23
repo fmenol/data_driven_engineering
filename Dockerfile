@@ -1,6 +1,7 @@
 FROM julia:1.7.3
 
 RUN apt-get update && \
+    apt-get install git &&\
     apt-get install -y wget && \
     rm -rf /var/lib/apt/list/*
 
@@ -16,6 +17,6 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
 CMD ["julia"]
 
 # docker build -t julia-dataeng .
-# docker run -it julia-dataeng
+# docker run -it -v /Users/v1fmenol/Documents/GitHub/data_driven_engineering:/home/julia/project julia-dataeng
 # docker tag julia-dataeng filipm/julia-dataeng
 # docker push filipm/julia-dataeng
