@@ -11,7 +11,8 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
         julia -e 'import Pkg; Pkg.add(name="IJulia", version="1.23.3"); using IJulia' &&\
         julia -e 'import Pkg; Pkg.add("LinearAlgebra"); using LinearAlgebra' &&\
         julia -e 'import Pkg; Pkg.add("FileIO"); using FileIO' &&\
-        julia -e 'import Pkg; Pkg.add(name="Images", version="0.25.2"); using Images' &&\
+        julia -e 'import Pkg; Pkg.add(name="Images", vesion="0.25.2"); using Images' &&\
+        julia -e 'import Pkg; Pkg.add(name="CSV", version = "0.10.4"); using CSV'&&\
         julia -e 'import Pkg; Pkg.add("Random"); using Random'
 
 CMD ["julia"]
