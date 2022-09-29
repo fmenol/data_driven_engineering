@@ -14,6 +14,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
         julia -e 'import Pkg; Pkg.add(name="Images", vesion="0.25.2"); using Images' &&\
         julia -e 'import Pkg; Pkg.add(name="CSV", version = "0.10.4"); using CSV'&&\
         julia -e 'import Pkg; Pkg.add("DelimitedFiles"); using CSV'&&\
+        julia -e 'import Pkg; Pkg.add("MAT"); using MAT'&&\
         julia -e 'import Pkg; Pkg.add("Random"); using Random'
 
 CMD ["julia"]
