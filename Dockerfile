@@ -15,9 +15,9 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
         julia -e 'import Pkg; Pkg.add(name="CSV", version = "0.10.4"); using CSV'&&\
         julia -e 'import Pkg; Pkg.add("DelimitedFiles"); using CSV'&&\
         julia -e 'import Pkg; Pkg.add("MAT"); using MAT'&&\
-        julia -e 'import Pkg; Pkg.add("ImageTransformations"); using ImageTransformations'&&\
-        julia -e 'import Pkg; Pkg.add("CoordinateTransformations"); using CoordinateTransformations'&&\
-        julia -e 'import Pkg; Pkg.add("Rotations"); using Rotations'&&\
+        julia -e 'import Pkg; Pkg.add(name="ImageTransformations", version="0.9.5"); using ImageTransformations'&&\
+        julia -e 'import Pkg; Pkg.add(name="CoordinateTransformations", version="0.6.2"); using CoordinateTransformations'&&\
+        julia -e 'import Pkg; Pkg.add(name="Rotations", version="1.3.2"); using Rotations'&&\
         julia -e 'import Pkg; Pkg.add("Random"); using Random'
 
 CMD ["julia"]
