@@ -18,6 +18,7 @@ RUN julia -e 'import Pkg; Pkg.update()' && \
         julia -e 'import Pkg; Pkg.add(name="ImageTransformations", version="0.9.5"); using ImageTransformations'&&\
         julia -e 'import Pkg; Pkg.add(name="CoordinateTransformations", version="0.6.2"); using CoordinateTransformations'&&\
         julia -e 'import Pkg; Pkg.add(name="Rotations", version="1.3.2"); using Rotations'&&\
+        julia -e 'import Pkg; Pkg.add(name="VectorizedRoutines", version="1.3.2"); using Rotations'&&\
         julia -e 'import Pkg; Pkg.add("Random"); using Random'
 
 CMD ["julia"]
