@@ -4,3 +4,4 @@ This is a collection of scripts combining data science, Machine Learning and con
 This is the structure we will follow:
 
 * Chapter 1: PCA/SVD
+* Chapter 2: Fourier & Wavelet transforms
