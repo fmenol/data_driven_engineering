@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y wget && \
     rm -rf /var/lib/apt/list/*
 
-RUN julia -e 'import Pkg; Pkg.update()' && \
-        # julia -e 'import Pkg; Pkg.add(name="Plots", version="1.31.4"); using Plots' && \
+RUN julia -e 'import Pkg; Pkg.update()'
+RUN julia -e 'import Pkg; Pkg.add(name="Plots", version="1.31.4"); using Plots'
         # julia -e 'import Pkg; Pkg.add(name="Distributions",version="0.25.66"); using Distributions' && \
         # julia -e 'import Pkg; Pkg.add(name="IJulia", version="1.23.3"); using IJulia' &&\
         # julia -e 'import Pkg; Pkg.add("LinearAlgebra"); using LinearAlgebra' &&\
