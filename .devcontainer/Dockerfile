@@ -19,7 +19,7 @@ RUN julia -e 'import Pkg; Pkg.add(name="ImageTransformations", version="0.9.5");
 RUN julia -e 'import Pkg; Pkg.add(name="CoordinateTransformations", version="0.6.2"); using CoordinateTransformations'
 RUN julia -e 'import Pkg; Pkg.add(name="Rotations", version="1.3.2"); using Rotations'
 RUN julia -e 'import Pkg; Pkg.add(name="TensorDecompositions", version="1.2.4"); using TensorDecompositions'
-# RUN julia -e 'import Pkg; Pkg.add(name="VectorizedRoutines", version="1.3.2"); using VectorizedRoutines'
+RUN julia -e 'import Pkg; Pkg.add("VectorizedRoutines"); using VectorizedRoutines'
 RUN julia -e 'import Pkg; Pkg.add("Random"); using Random'
 
 CMD ["julia"]

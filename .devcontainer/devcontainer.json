@@ -3,7 +3,18 @@
     "build": {
         "dockerfile": "Dockerfile",
         "context": "..",
-        // Update 'VARIANT' to pick a Python version: 3, 3.6, 3.7, 3.8
         "args": {"VARIANT": "1.7.3"}
     },
+    // Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"julialang.language-julia"
+			]
+		}
+	},
+
+	"remoteUser": "vscode"
 }
